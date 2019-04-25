@@ -15,7 +15,6 @@ class Login(unittest.TestCase):
         测试用户登录
         """
         po = LoginPage(self.driver)
-        # po.open_browser("http://192.168.0.184:8080/zbgl/index.html#/")
         po.get("http://localhost:8080/dcksh/index.html")
         po.input_username("admin")
         po.input_pwd("admin")
