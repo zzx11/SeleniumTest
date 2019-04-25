@@ -10,7 +10,7 @@ class Setting(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = BrowserEngine().init_driver()
         po = LoginPage(cls.driver)
-        po.get_url("http://localhost:8080/dcksh/index.html")
+        po.get("http://localhost:8080/dcksh/index.html")
         po.login()
         cls.driver.implicitly_wait(30)
 

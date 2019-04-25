@@ -38,3 +38,9 @@ class BasePage(object):
     def click(self, locator):
         ele = self.find_element(*locator)
         ele.click()
+
+    def input2(self, ele, text):
+        ele.send_keys(text)
+
+    def click2(self, ele):
+        ele.click()
