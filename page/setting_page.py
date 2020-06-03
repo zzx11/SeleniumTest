@@ -1,9 +1,9 @@
 import time
 
 from selenium.webdriver.common.by import By
-from Common.base_page import BasePage
-from Common.logger import Logger
-from Common.poium import Page, PageElement
+from common.base_page import BasePage
+from common.logger import Logger
+from common.poium import Page, PageElement
 
 my_log = Logger(logger='SettingPage').get_log()
 

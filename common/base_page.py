@@ -2,8 +2,8 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from Common.logger import Logger
-from Config import config
+from common.logger import Logger
+from config import config
 my_log = Logger(logger='BasePage').get_log()
 
 

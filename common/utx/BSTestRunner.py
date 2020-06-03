@@ -438,7 +438,7 @@ class _TestResult(unittest.TestResult):
         _, _exc_str = self.errors[-1]
         output = self.complete_output()
         self.result.append((2, test, output, _exc_str, self._case_run_time))
-        log.error('TestCase Error')
+        log.error('testcase Error')
         if setting.show_error_traceback:
             log.error(_exc_str)
 
@@ -453,7 +453,7 @@ class _TestResult(unittest.TestResult):
         _, _exc_str = self.failures[-1]
         output = self.complete_output()
         self.result.append((1, test, output, _exc_str, self._case_run_time))
-        log.error('TestCase Failed')
+        log.error('testcase Failed')
         if setting.show_error_traceback:
             log.error(_exc_str)
 

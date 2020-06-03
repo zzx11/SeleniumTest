@@ -1,7 +1,7 @@
 import unittest
-from Config.browser_engine import BrowserEngine
-from Page.login_page import LoginPage
-from Page.setting_page import SettingPage
+from config.browser_engine import BrowserEngine
+from page.login_page import LoginPage
+from page.setting_page import SettingPage
 
 
 class Setting(unittest.TestCase):

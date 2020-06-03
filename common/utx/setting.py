@@ -3,7 +3,7 @@
 """
 Created by jianbing on 2017-11-04
 """
-from Common.utx.tag import Tag
+from common.utx.tag import Tag
 
 
 class setting:

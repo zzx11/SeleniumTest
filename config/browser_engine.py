@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-from Config import config
+from config import config
 
 
 class BrowserEngine(object):

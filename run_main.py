@@ -1,10 +1,10 @@
 import time
-from Common.HTMLTestRunner_PY3 import HTMLTestRunner
+from common.HTMLTestRunner_PY3 import HTMLTestRunner
 from unittest import defaultTestLoader
-from Common.utx import *
+from common.utx import *
 
 # 指定测试用例目录
-test_dir = './TestCase'
+test_dir = 'testcase'
 test_suits = defaultTestLoader.discover(test_dir, pattern='seting_test.py')
 
 if __name__ == "__main__":

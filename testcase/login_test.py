@@ -1,7 +1,7 @@
 import unittest
 import time
-from Config.browser_engine import BrowserEngine
-from Page.login_page import LoginPage
+from config.browser_engine import BrowserEngine
+from page.login_page import LoginPage
 
 
 class Login(unittest.TestCase):

@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
-from Common.base_page import BasePage
-from Common.poium import Page, PageElement
+from common.base_page import BasePage
+from common.poium import Page, PageElement
 
 
 class LoginPage(Page):

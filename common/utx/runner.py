@@ -2,8 +2,8 @@
 # -*- coding: UTF-8 -*-
 import os
 import unittest
-from Common.utx import log
-from Common.utx.BSTestRunner import BSTestRunner
+from common.utx import log
+from common.utx.BSTestRunner import BSTestRunner
 
 
 class TestRunner:

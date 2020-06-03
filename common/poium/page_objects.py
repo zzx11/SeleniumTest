@@ -32,7 +32,7 @@ LOCATOR_LIST = {
 
 class PageObject:
     """
-    Page Object pattern.
+    page Object pattern.
     """
 
     def __init__(self, driver, url=None):
@@ -56,7 +56,7 @@ class PageObject:
 
 class PageElement(object):
     """
-    Page Element descriptor.
+    page Element descriptor.
     :param css:    `str`
         Use this css locator
     :param id_:    `str`
@@ -75,14 +75,14 @@ class PageElement(object):
         Use this class locator
     :param context: `bool`
         This element is expected to be called with context
-    Page Elements are used to access elements on a page. The are constructed
+    page Elements are used to access elements on a page. The are constructed
     using this factory method to specify the locator for the element.
         >> from page_objects import PageObject, PageElement
         >> class MyPage(PageObject):
                 elem1 = PageElement(css='div.myclass')
                 elem2 = PageElement(id_='foo')
                 elem_with_context = PageElement(name='bar', context=True)
-    Page Elements act as property descriptors for their Page Object, you can get
+    page Elements act as property descriptors for their page Object, you can get
     and set them as normal attributes.
     """
     def __init__(self, context=False, timeout=10, describe=None, **kwargs):
