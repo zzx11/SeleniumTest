@@ -1,5 +1,7 @@
+import unittest
 from time import sleep
 from common.firefox.test_firefox import myfox
+from page.main_page import MainPage
 
 
 def highLightElement(driver, element):
@@ -10,28 +12,40 @@ def highLightElement(driver, element):
                           element, "background:green ;border:2px solid red;")
 
 
-browser = myfox().work()
-# browser.maximize_window()
-browser.get("http://192.168.3.145:10001/aaf/index")
-print(browser.title)
-showAllBtn = browser.find_element_by_xpath("//*/div[contains(text(), '展示全部')]")
-# 调用高亮显示的元素封装函数
-highLightElement(browser, showAllBtn)
-showAllBtn.click()
-# 菜单栏iframe跳转进入
-browser.switch_to.frame(browser.find_element_by_xpath('//iframe[ @id= "redirectUri"]'))
-sleep(1)
-jydj = browser.find_element_by_xpath('//span[ @title= "简易登记"]')
-highLightElement(browser, jydj)
-sleep(1)
-jydj.click()
-# topIcisMainFrame跳转进入
-browser.switch_to.frame(browser.find_element_by_id('topIcisMainFrame'))
-sleep(1)
-# 不核名按钮，核名按钮value=1
-browser.find_element_by_xpath('//input[ @name= "veriNameFlag" and @value=0]').click()
-# 增加按钮
-browser.find_element_by_id('addSimInvButton').click()
+class Login(unittest.TestCase):
+
+    def setUp(self):
+        self.browser = myfox().work()
+        # browser.maximize_window()
+        self.browser.get("http://192.168.3.145:10001/aaf/index")
+        self.browser.implicitly_wait(30)
+
+    def test_login(self):
+        print(self.browser.title)
+        po = MainPage(self.browser)
+        po.show_all()
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+# # 调用高亮显示的元素封装函数
+# highLightElement(browser, showAllBtn)
+# showAllBtn.click()
+# # 菜单栏iframe跳转进入
+# browser.switch_to.frame(browser.find_element_by_xpath('//iframe[ @id= "redirectUri"]'))
+# sleep(1)
+# jydj = browser.find_element_by_xpath('//span[ @title= "简易登记"]')
+# highLightElement(browser, jydj)
+# sleep(1)
+# jydj.click()
+# # topIcisMainFrame跳转进入
+# browser.switch_to.frame(browser.find_element_by_id('topIcisMainFrame'))
+# sleep(1)
+# # 不核名按钮，核名按钮value=1
+# browser.find_element_by_xpath('//input[ @name= "veriNameFlag" and @value=0]').click()
+# # 增加按钮
+# browser.find_element_by_id('addSimInvButton').click()
 
 
 # sumbitButton = browser.find_element_by_id("stb")

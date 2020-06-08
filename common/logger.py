@@ -18,7 +18,7 @@ class Logger(object):
         # 创建一个handler，用于写入日志文件
         rq = time.strftime('%Y%m%d', time.localtime(time.time()))
         path = project_path.path
-        log_path = path + '\Report\Logs\\'
+        log_path = path + '\\report\logs\\'
         log_name = log_path + rq + '.log'
         fh = logging.FileHandler(log_name)
         fh.setLevel(logging.INFO)

@@ -8,6 +8,7 @@ path = project_path.path
 driver_path = path + '\\tools\\geckodriver.exe'
 data_path = path + '\\data\\params.data'
 
+
 class myfox():
     '''目的：不需要每次都重新打开浏览器'''
 
