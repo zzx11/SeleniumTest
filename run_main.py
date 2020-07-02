@@ -5,7 +5,7 @@ from common.utx import *
 
 # 指定测试用例目录
 test_dir = 'testcase'
-test_suits = defaultTestLoader.discover(test_dir, pattern='seting_test.py')
+test_suits = defaultTestLoader.discover(test_dir, pattern='topicis_embed_test.py')
 
 if __name__ == "__main__":
     setting.check_case_doc = False  # 关闭检测是否编写了测试用例描述
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     setting.sort_case = True  # 是否按照编写顺序，对用例进行排序
 
     now = time.strftime("%Y-%m-%d %H_%M_%S")
-    filename = './Report/' + now + '_result.html'
+    filename = './report/' + now + '_result.html'
     fp = open(filename, 'wb')
     runner = HTMLTestRunner(stream=fp,
                             title='WebUI自动化测试报告',

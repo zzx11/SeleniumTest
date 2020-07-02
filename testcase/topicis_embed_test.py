@@ -1,6 +1,7 @@
 import unittest
 from time import sleep
 from common.firefox.test_firefox import myfox
+from page.gtjydj import GTJYDJPage
 from page.main_page import MainPage
 
 
@@ -20,14 +21,21 @@ class Login(unittest.TestCase):
         self.browser.get("http://192.168.3.145:10001/aaf/index")
         self.browser.implicitly_wait(30)
 
-    def test_login(self):
+    def test_main_page(self):
         print(self.browser.title)
         po = MainPage(self.browser)
         po.show_all()
+        po.click_gtjydj_menu()
+        po1 = GTJYDJPage(self.browser)
+        po1.no_name()
 
 
 if __name__ == "__main__":
     unittest.main()
+    # suite = unittest.TestSuite()
+    # suite.addTest(Login('test_gtjydj'))
+    # suite =  unittest.TestLoader().loadTestsFromTestCase(MyTest)
+    # unittest.TextTestRunner(verbosity=2).run(suite)
 
 # # 调用高亮显示的元素封装函数
 # highLightElement(browser, showAllBtn)
